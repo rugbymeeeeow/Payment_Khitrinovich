@@ -1,0 +1,38 @@
+﻿<Window x:Class="Payment_Khitrinovich.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Payment_Khitrinovich"
+        xmlns:charts="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+        mc:Ignorable="d"
+        Title="Приложение" Height="450" Width="800" Closing="WindowClosing">
+    <Grid Height="434" VerticalAlignment="Center" HorizontalAlignment="Right" Width="800">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="54*"></RowDefinition>
+            <RowDefinition Height="0*"></RowDefinition>
+            <RowDefinition Height="163*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,29" Height="79" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="635">
+            <TextBlock Text="Пользователь:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+            <ComboBox x:Name="CmbUser" Width="105" Height="25" DisplayMemberPath="FIO" SelectionChanged="UpdateChart"/>
+            <TextBlock Text="Тип диаграммы:" VerticalAlignment="Center" Margin="10,0,5,0"/>
+            <ComboBox x:Name="CmbDiagram" Width="161" Height="25" SelectionChanged="UpdateChart"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="309" RenderTransformOrigin="0.647,0.592" Margin="252,49,0,0">
+            <Button x:Name="ExportExcel" Content="Экспорт в Excel" Height="25" Width="158" Margin="0,0,5,0" Click="ButtonClickExcel"/>
+            <Button x:Name="ExportWord" Content="Экспорт в Word" Height="25" Width="128" Click="ExportWordClick"/>
+        </StackPanel>
+
+        <WindowsFormsHost Margin="5,0,0,0" Height="326" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Width="790">
+            <charts:Chart x:Name="ChartPayments">
+                <charts:Chart.Legends>
+                    <charts:Legend>
+
+                    </charts:Legend>
+                </charts:Chart.Legends>
+            </charts:Chart>
+        </WindowsFormsHost>
+
+    </Grid>
+</Window>

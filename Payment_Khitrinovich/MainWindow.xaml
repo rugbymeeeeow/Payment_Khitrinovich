@@ -15,13 +15,13 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="0,0,0,29" Height="79" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="635">
             <TextBlock Text="Пользователь:" VerticalAlignment="Center" Margin="0,0,5,0"/>
-            <ComboBox x:Name="CmbUser" Width="105" Height="25" DisplayMemberPath="FIO" SelectionChanged="UpdateChart"/>
+            <ComboBox x:Name="CmbUser" Width="105" Height="35" DisplayMemberPath="FIO" SelectionChanged="UpdateChart"/>
             <TextBlock Text="Тип диаграммы:" VerticalAlignment="Center" Margin="10,0,5,0"/>
-            <ComboBox x:Name="CmbDiagram" Width="161" Height="25" SelectionChanged="UpdateChart"/>
+            <ComboBox x:Name="CmbDiagram" Width="161" Height="34" SelectionChanged="UpdateChart"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="309" RenderTransformOrigin="0.647,0.592" Margin="252,49,0,0">
-            <Button x:Name="ExportExcel" Content="Экспорт в Excel" Height="25" Width="158" Margin="0,0,5,0" Click="ButtonClickExcel"/>
-            <Button x:Name="ExportWord" Content="Экспорт в Word" Height="25" Width="128" Click="ExportWordClick"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="321" RenderTransformOrigin="0.647,0.592" Margin="252,49,0,0">
+            <Button x:Name="ExportExcel" Content="Экспорт в Excel" Height="35" Width="159" Margin="0,0,5,0" Click="ButtonClickExcel"/>
+            <Button x:Name="ExportWord" Content="Экспорт в Word" Height="35" Width="134" Click="ExportWordClick"/>
         </StackPanel>
 
         <WindowsFormsHost Margin="5,0,0,0" Height="326" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Width="790">
@@ -33,6 +33,5 @@
                 </charts:Chart.Legends>
             </charts:Chart>
         </WindowsFormsHost>
-
     </Grid>
 </Window>
